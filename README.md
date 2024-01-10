@@ -22,7 +22,20 @@ We've got a couple of basic Queries and Mutations on the `Users` table to get yo
 ### Database
 You'll be using a Postgres database that we've set up on [Supabase](https://supabase.com/). We've got two tables so far:
 
-* `Users`
-* `Posts`
+```
+Users:
+    id (uuid)
+    username (varchar)
+    first_name (varchar)
+    last_name (varchar)
+    created_at (timestamp)
+
+Posts:
+    id (uuid)
+    title (varchar)
+    content (text)
+    user_id (foreign key, uuid)
+    created_at (timestamp)
+```
 
 The `Users` have a one-to-many relationship with `Posts`.
